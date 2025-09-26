@@ -6,10 +6,18 @@ const modalMeta = document.getElementById("modal-meta");
 const modalDesc = document.getElementById("modal-desc");
 const modalGallery = document.getElementById("modal-gallery");
 const closeModal = document.getElementById("close-modal");
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
 
 // Active nav highlight
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll("#desktop-nav a, #mobile-menu a");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+
 
 window.addEventListener("scroll", () => {
   let current = "";
