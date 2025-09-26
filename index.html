@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="img/logo3.jpg" />
+
+    <title>
+      Chuksmill Integrated Ltd | Civil • Mechanical • Construction Works
+    </title>
+    <meta
+      name="description"
+      content="Chuksmill Integrated Ltd delivers civil engineering, mechanical engineering, and general construction works — plus procurement & general merchandise supply."
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                red: "#D71920",
+                redDark: "#BE161C",
+                ink: "#0B2239",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .active {
+        color: #d71920;
+        font-weight: 600;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-up {
+        animation: fadeUp 1s ease-out forwards;
+      }
+
+      .animated-bg {
+        background-image: repeating-linear-gradient(
+          135deg,
+          #d71920 0 40px,
+          /* wider red stripe */ #be161c 40px 80px /* wider dark red stripe */
+        );
+        background-size: 200% 200%;
+        animation: moveBg 15s linear infinite; /* slower and smoother */
+      }
+
+      /* .animated-bg {
+        background-image: repeating-linear-gradient(
+          135deg,
+          #d71920 0 12px,
+          #be161c 12px 24px
+        );
+        animation: moveBg 5s linear infinite;
+      } */
+
+      @keyframes moveBg {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 100% 100%;
+        }
+      }
+
+      .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+      .project-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="text-slate-900 bg-white">
+    <!-- Header -->
+    <header class="border-b sticky top-0 bg-white/90 backdrop-blur z-50">
+      <div
+        class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <a href="#top" class="flex items-center gap-2">
+          <img
+            src="img/logo3.jpg"
+            alt="Logo"
+            class="h-9 w-auto rounded-sm shadow-sm"
+          />
+          <span class="font-bold">Chuksmill Integrated Ltd</span>
+        </a>
+
+        <nav class="hidden md:flex gap-6 text-sm" id="desktop-nav">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden flex flex-col gap-1.5">
+          <span class="w-6 h-0.5 bg-slate-800"></span>
+          <span class="w-6 h-0.5 bg-slate-800"></span>
+          <span class="w-6 h-0.5 bg-slate-800"></span>
+        </button>
+
+        <a
+          href="#contact"
+          class="hidden md:inline rounded-md bg-brand-red hover:bg-brand-redDark px-4 py-2 text-sm font-semibold text-white"
+        >
+          Request a Quote
+        </a>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="flex flex-col px-4 py-3 gap-3 text-sm">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a
+            href="#contact"
+            class="rounded-md bg-brand-red text-white px-4 py-2 text-center"
+            >Request a Quote</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="top" class="text-white animated-bg">
+      <div class="max-w-6xl mx-auto px-4 py-40">
+        <p class="uppercase tracking-wider text-white/80 font-semibold mb-3">
+          Civil • Mechanical • Construction Works • General Merchandise
+        </p>
+        <h1 class="fade-up text-4xl md:text-5xl font-extrabold leading-tight">
+          Reliable builds. Trusted results.
+        </h1>
+        <p class="mt-4 max-w-2xl text-white/85">
+          From roadworks and foundations to HVAC, piping and full builds, we
+          deliver with safety, quality, and clear communication.
+        </p>
+        <div class="mt-8 flex gap-3">
+          <a
+            href="#contact"
+            class="rounded-md bg-white text-brand-red px-5 py-3 font-semibold hover:scale-105 transition"
+            >Request a Quote</a
+          >
+          <a
+            href="#projects"
+            class="rounded-md border border-white/40 px-5 py-3 font-semibold hover:bg-white/10"
+            >View Projects</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <!-- Services -->
+      <section id="services" class="max-w-6xl mx-auto px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-bold">What we do</h2>
+        <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-lg border p-5">
+            <h3 class="font-semibold">Civil Engineering</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Roads & drainage, concrete works, foundations, culverts.
+            </p>
+          </article>
+          <article class="rounded-lg border p-5">
+            <h3 class="font-semibold">Mechanical Engineering</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              HVAC, piping, plant installation, steel fabrication.
+            </p>
+          </article>
+          <article class="rounded-lg border p-5">
+            <h3 class="font-semibold">Construction Works</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              New builds, renovations, refurbishments, fit-outs.
+            </p>
+          </article>
+          <article class="rounded-lg border p-5">
+            <h3 class="font-semibold">General Merchandise</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Procurement and supply of building materials & tools.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+          <h2 class="text-2xl md:text-3xl font-bold">Recent projects</h2>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Project 1 -->
+            <figure
+              class="project-card rounded-lg border bg-white"
+              data-title="Bridge Construction"
+              data-location="Abuja • 2025"
+              data-main="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200"
+              data-extra="https://images.unsplash.com/photo-1581091014534-8985e9d2a9b0?q=80&w=600,
+                        https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600,
+                        https://images.unsplash.com/photo-1529429612778-041e3a460346?q=80&w=600"
+              data-desc="This bridge project included civil engineering works, reinforced concrete foundations, and road integration."
+            >
+              <img
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600"
+                class="h-48 w-full object-cover"
+              />
+              <figcaption class="p-4">
+                <div class="font-semibold">Bridge Construction</div>
+                <div class="text-sm text-slate-600">Abuja • 2025</div>
+              </figcaption>
+            </figure>
+
+            <!-- Project 2 -->
+            <figure
+              class="project-card rounded-lg border bg-white"
+              data-title="Office Complex Renovation"
+              data-location="Lagos • 2024"
+              data-main="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200"
+              data-extra="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=600,
+              https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=600,
+              https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=600"
+              data-desc="Full refurbishment of a commercial office space, including mechanical and electrical installations."
+            >
+              <img
+                src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=600"
+                class="h-48 w-full object-cover"
+              />
+              <figcaption class="p-4">
+                <div class="font-semibold">Office Complex Renovation</div>
+                <div class="text-sm text-slate-600">Lagos • 2024</div>
+              </figcaption>
+            </figure>
+
+            <!-- Project 3 -->
+            <figure
+              class="project-card rounded-lg border bg-white"
+              data-title="Residential Estate Development"
+              data-location="Port Harcourt • 2023"
+              data-main="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200"
+              data-extra="https://images.unsplash.com/photo-1505691723518-36a5ac3b67e5?q=80&w=600,
+                        https://images.unsplash.com/photo-1541976076758-347942db197a?q=80&w=600,
+                        https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=600"
+              data-desc="Development of a gated residential estate with roads, drainage, and modern housing units."
+            >
+              <img
+                src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=600"
+                class="h-48 w-full object-cover"
+              />
+              <figcaption class="p-4">
+                <div class="font-semibold">Residential Estate Development</div>
+                <div class="text-sm text-slate-600">Port Harcourt • 2023</div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="max-w-6xl mx-auto px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-bold">
+          About Chuksmill Integrated Ltd
+        </h2>
+        <p class="mt-3 max-w-3xl text-slate-700">
+          We’re a Nigerian-based firm delivering civil and mechanical
+          engineering and full construction works. We also handle procurement
+          and general merchandise supply to keep your project moving. Safety,
+          communication and workmanship are our priorities.
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+          <h2 class="text-2xl md:text-3xl font-bold">Request a quote</h2>
+          <form
+            action="https://formspree.io/f/your-form-id"
+            method="POST"
+            class="mt-6 grid gap-4 sm:grid-cols-2"
+          >
+            <input
+              name="name"
+              placeholder="Name"
+              class="rounded-md border px-3 py-2"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="rounded-md border px-3 py-2"
+              required
+            />
+            <input
+              name="phone"
+              placeholder="Phone (optional)"
+              class="rounded-md border px-3 py-2"
+            />
+            <select name="service" class="rounded-md border px-3 py-2">
+              <option>Civil Engineering</option>
+              <option>Mechanical Engineering</option>
+              <option>Construction Works</option>
+              <option>General Merchandise</option>
+            </select>
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Message"
+              class="sm:col-span-2 rounded-md border px-3 py-2"
+            ></textarea>
+            <button
+              class="sm:col-span-2 rounded-md bg-brand-red hover:bg-brand-redDark px-5 py-3 text-white font-semibold"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t">
+      <div
+        class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-600 flex flex-col md:flex-row md:justify-between"
+      >
+        <div>© <span id="year"></span> Chuksmill Integrated Ltd</div>
+        <div>Powered by ChimTech</div>
+      </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div
+      id="project-modal"
+      class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-6"
+    >
+      <div
+        class="bg-white rounded-lg max-w-4xl w-full overflow-y-auto max-h-[90vh] shadow-xl"
+      >
+        <img id="modal-main" src="" class="w-full h-64 object-cover" />
+        <div class="p-4 border-b">
+          <h3 id="modal-title" class="text-xl font-bold"></h3>
+          <p id="modal-meta" class="text-sm text-slate-500"></p>
+        </div>
+        <div id="modal-gallery" class="grid grid-cols-3 gap-2 p-4"></div>
+        <div class="p-4">
+          <p id="modal-desc" class="text-slate-700"></p>
+          <button
+            id="close-modal"
+            class="mt-4 bg-brand-red hover:bg-brand-redDark text-white px-4 py-2 rounded"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
